@@ -50,7 +50,7 @@ function resetTimer() {
   difference = 0;
   paused = 0;
   running = 0;
-  timerDisplay.innerHTML = 'The future starts today not tomorrow';
+  timerDisplay.innerHTML = 'The future starts today not tomorrow...';
   timerDisplay.style.background = "#4E3D42";
   timerDisplay.style.color = "#CDD6DD";
   timerDisplay.style.cursor = "pointer";
@@ -67,12 +67,9 @@ function getShowTime() {
   } else {
     difference = updatedTime - startTime;
   }
-  // var differenceString = String(difference)
-  // console.log(differenceString)
-  // console.log(differenceString.charAt(differenceString.length-1))
-  // timerDisplay.innerHTML = differenceString.charAt(differenceString.length-9) + differenceString.charAt(differenceString.length-8) + ':' + differenceString.charAt(differenceString.length-7) + differenceString.charAt(differenceString.length-6) + ':' + differenceString.charAt(differenceString.length-5) + differenceString.charAt(differenceString.length-4) + ':' + differenceString.charAt(differenceString.length-3) + differenceString.charAt(differenceString.length-2);
 
-
+  var differenceString = String(difference);
+  var centiseconds = differenceString.charAt(differenceString.length-3) + differenceString.charAt(differenceString.length-2);
 
   var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
@@ -83,5 +80,43 @@ function getShowTime() {
   minutes = (minutes < 10) ? "0" + minutes : minutes;
   seconds = (seconds < 10) ? "0" + seconds : seconds;
   milliseconds = (milliseconds < 100) ? (milliseconds < 10) ? "00" + milliseconds : "0" + milliseconds : milliseconds;
-  timerDisplay.innerHTML = hours + ':' + minutes + ':' + seconds + ':' + milliseconds;
+  timerDisplay.innerHTML = hours + ':' + minutes + ':' + seconds + ':' + centiseconds;
+}
+
+function LapTimer(){
+    var i = localStorage.length + 1;
+  console.log('i is' + i);
+  localStorage.setItem(i, timerDisplay.innerText);
+  RenderLaps();
+}
+
+function RenderLaps(){
+  var LapContainer = document.querySelector('.lapcontainer');
+     LapContainer.innerHTML = `Laps:<br>    ${fetchinglaps(1)}
+${fetchinglaps(2)}
+${fetchinglaps(3)}
+${fetchinglaps(4)}
+${fetchinglaps(5)}
+${fetchinglaps(6)}
+${fetchinglaps(7)}
+${fetchinglaps(8)}
+${fetchinglaps(9)}
+${fetchinglaps(11)}
+${fetchinglaps(12)}
+${fetchinglaps(13)}`;
+}
+RenderLaps();
+
+function fetchinglaps(x){
+ if (localStorage.getItem(x) !== null){
+   return `<br>${x}.   ` + localStorage.getItem(x);
+ }else{
+   return '';
+ }
+}
+console.log(fetchinglaps(1))
+
+function ClearLap(){
+  localStorage.clear();
+  RenderLaps();
 }

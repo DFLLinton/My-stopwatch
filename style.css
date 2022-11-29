@@ -1,38 +1,50 @@
 html, body {
-    height: 100%;
-    width: 100%;
-    background-color: #161214;
-  }
-#timerContainer {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    width:500px;
-    margin:200px auto;
-    border-top:0px;
-      }
-.timer, .reset {
-    float:left;
-    width: 54%;
-    padding: 20px 0;
-    font-size: 15px;
-    text-align:center;
-    color: #CDD6DD;
-    background: #4E3D42;
-    cursor: pointer;
-    border-radius: 10px;
-      }
-.reset {
-    background: #4E3D42;
-    color: #CDD6DD;
-    width:14.9%;
-    border: 0.5px solid #CDD6DD;
-      }
-.reset:hover {
-    background: #E07A5F;
-    color: #CDD6DD;
-      }
-.lighter {
-    background: #E07A5F;
-    color: #4E3D42;
-      }
-  
+  height: 100%;
+  width: 100%;
+  background-color: #161214;
+}
+    #timerContainer {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+      width:500px;
+      margin:200px auto;
+      min-height: 60px;
+      border-top:0px;
+    }
+    .timer, .reset {
+      float:left;
+      width: 54%;
+      padding: 20px 0;
+      font-size: 15px;
+      text-align:center;
+      color: #CDD6DD;
+      background: #4E3D42;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .reset {
+      background: #4E3D42;
+      color: #CDD6DD;
+      width:14.9%;
+      border: 0.5px solid #CDD6DD;
+    }
+    .reset:hover {
+      background: #E07A5F;
+      color: #CDD6DD;
+    }
+    .lighter {
+      background: #E07A5F;
+      color: #4E3D42;
+    }
+.lapcontainer{
+  float:left;
+      width: 69%;
+      padding: 20px 0;
+      font-size: 15px;
+      text-align:center;
+      color: #4E3D42;
+      background:  #CDD6DD;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 0.5px solid #CDD6DD;
+}

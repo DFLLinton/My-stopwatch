@@ -113,6 +113,7 @@ ${fetchinglaps(9)}
 ${fetchinglaps(11)}
 ${fetchinglaps(12)}
 ${fetchinglaps(13)}`;
+
 }
 RenderLaps();
 

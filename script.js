@@ -91,7 +91,6 @@ function getShowTime() {
 //saves current time to local storage and renders DOM
 function LapTimer(){
     var i = localStorage.length + 1;
-  console.log('i is' + i);
   if (running ==1){
   localStorage.setItem(i, timerDisplay.innerText);
   RenderLaps();
@@ -110,6 +109,7 @@ ${fetchinglaps(6)}
 ${fetchinglaps(7)}
 ${fetchinglaps(8)}
 ${fetchinglaps(9)}
+${fetchinglaps(10)}
 ${fetchinglaps(11)}
 ${fetchinglaps(12)}
 ${fetchinglaps(13)}`;

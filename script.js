@@ -9,6 +9,7 @@ var tInterval;
 var savedTime;
 var paused = 0;
 var running = 0;
+ClearLap();
 
 function startTimer() {
   if (!running) {

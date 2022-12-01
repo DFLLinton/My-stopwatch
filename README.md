@@ -1,6 +1,6 @@
 # My-stopwatch
 
-A stopwatch application that I made as part of the application for TPXimpact.
+This repo contains a stopwatch application that I made as part of the application for TPXimpact.
 
 The stopwatch is accurate and has the following features:
 
